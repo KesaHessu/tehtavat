@@ -1,0 +1,27 @@
+kayttaja->selain:
+note left of selain
+kayttaja kirjottaa osoiteriville
+fullstack-exampleapp.herokuapp.com/notes
+end note
+selain->palvelin: GET fullstack-exampleapp.herokuapp.com/notes
+note left of palvelin
+  palvelin palauttaa HTML-sivun
+end note
+palvelin->selain: status 200, sivun HTML-koodi
+
+selain->palvelin: GET main.css
+palvelin->selain: status 200, css-tyylit
+selain->palvelin: GET main.js
+palvelin->selain: status 200, javascript-osio
+selain->selain: 
+note left of selain
+main.js-koodin ajo kun dokumentti ladattu
+end note
+selain->palvelin: GET data.json
+palvelin->selain: status 200, muistiinpanot
+
+note left of selain
+ selain näyttää sivun johon on lisätty uusi muistiinpano ja sen jälkeen 
+ populoitu muistiinpanolista main.js ja data.jsonin
+ perusteella ja sen tyylit on muojattu main.css mukaiseksi
+end note

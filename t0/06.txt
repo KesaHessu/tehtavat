@@ -1,0 +1,14 @@
+kayttaja->selain:
+note left of selain
+kayttaja kirjottaa uuden muistiipanon
+end note
+selain->selain: 
+note left of selain
+Formin tavallinen lähetys estetty. Sen sijaan lisätään uusi arvo DOMiin,
+piirretään se uudelleen ruudulle ja vasta lopuksi lähetetään uusi arvo palvelimelle
+end note
+selain->palvelin: POST /new_note_spa
+palvelin->palvelin: 
+note left of palvelin
+ lisätään muistiinpanon palvelinpäässä
+end note
